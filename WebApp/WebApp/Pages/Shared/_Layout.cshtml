@@ -4,14 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
-    <title>@ViewData["Title"] - WebApp</title>
+    <title>@ViewData["Title"] Examen 2 Progra VI</title>
    @await Html.PartialAsync("_HeaderPartial")
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:dodgerblue">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Examen 1 Programación 6</a>
+            <a class="navbar-brand" href="#">Examen 2 Programación 6</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -21,7 +21,10 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-page="/TipoInquilino/Grid">Tipo Inquilino</a>
+                        <a class="nav-link" asp-page="/Producto/Grid">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Orden/Grid">Ordenes</a>
                     </li>
                 </ul>
             </div>

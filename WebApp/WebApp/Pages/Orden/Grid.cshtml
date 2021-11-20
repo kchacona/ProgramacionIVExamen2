@@ -1,11 +1,11 @@
 ﻿@page
-@model WebApp.Pages.TipoInquilino.GridModel
+@model WebApp.Pages.Orden.GridModel
 @{ }
 <div class="container-fluid">
 
     <div class="card">
         <div class="card-header">
-            Tipo Inquilino
+            Ordenes
         </div>
         <div class="card-body">
             <a class="btn btn-outline-primary" asp-page="Edit">
@@ -17,7 +17,8 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Descripcion</th>
+                                <th>ID Producto</th>
+                                <th>Cantidad</th>
                                 <th>Estado</th>
                             </tr>
                         </thead>
@@ -25,12 +26,13 @@
                             @foreach (var item in Model.GridList)
                             {
                 <tr>
-                    <td>@item.Id_TipoInquilino</td>
-                    <td>@item.Descripcion</td>
+                    <td>@item.IdOrden</td>
+                    <td>@item.IdProducto</td>
+                    <td>@item.Cantidad</td>
                     <td>@(item.Estado ? "Activo": "Inactivo")</td>
                     <td>
-                        <a class="btn btn-primary" asp-page="Edit" asp-route-id="@item.Id_TipoInquilino"><i class='bx bx-edit-alt'></i></a>
-                        <a class="btn btn-danger" asp-page-handler="Eliminar" asp-route-id="@item.Id_TipoInquilino"><i class='bx bx-trash'></i></a>
+                        <a class="btn btn-primary" asp-page="Edit" asp-route-id="@item.IdOrden"><i class='bx bx-edit-alt'></i></a>
+                        <a class="btn btn-danger" asp-page-handler="Eliminar" asp-route-id="@item.IdOrden"><i class='bx bx-trash'></i></a>
                     </td>
                 </tr>}
                         </tboby>
@@ -67,6 +69,6 @@
         });
     </script>
 
-    <script defer src="~/App/TipoInquilino/Grid.js"></script>
+    <script defer src="~/App/Orden/Grid.js"></script>
 
 }

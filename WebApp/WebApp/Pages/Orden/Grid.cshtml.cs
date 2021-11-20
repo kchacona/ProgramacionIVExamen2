@@ -7,19 +7,19 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using WBL;
 using Entity;
 
-namespace WebApp.Pages.TipoInquilino
+namespace WebApp.Pages.Orden
 {
     public class GridModel : PageModel
     {
-        private readonly ITipoInquilinoService TipoInquilinoService;
+        private readonly IOrdenService OrdenService;
 
-        public GridModel(ITipoInquilinoService TipoInquilinoService)
+        public GridModel(IOrdenService OrdenService)
         {
-            this.TipoInquilinoService = TipoInquilinoService;
+            this.OrdenService = OrdenService;
         }
 
 
-        public IEnumerable<TipoInquilinoEntity> GridList { get; set; } = new List<TipoInquilinoEntity>();
+        public IEnumerable<OrdenEntity> GridList { get; set; } = new List<OrdenEntity>();
 
         public string Mensaje { get; set; } = "";
         public async Task<IActionResult> OnGet()
@@ -27,7 +27,7 @@ namespace WebApp.Pages.TipoInquilino
 
             try
             {
-                GridList = await TipoInquilinoService.Get();
+                GridList = await OrdenService.Get();
 
                 if (TempData.ContainsKey("Msg"))
                 {
@@ -52,7 +52,7 @@ namespace WebApp.Pages.TipoInquilino
 
             try
             {
-                var result = await TipoInquilinoService.Delete( new TipoInquilinoEntity { Id_TipoInquilino = id});
+                var result = await OrdenService.Delete( new OrdenEntity { IdOrden = id});
 
                 if (result.CodeError!=0)
                 {

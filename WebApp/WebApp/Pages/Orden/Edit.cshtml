@@ -1,5 +1,5 @@
 ﻿@page
-@model WebApp.Pages.TipoInquilino.EditModel
+@model WebApp.Pages.Orden.EditModel
 @{ }
 
 
@@ -13,8 +13,12 @@
                 <input type="hidden" asp-for="Entity.Id_TipoInquilino" />
 
                 <div class="form-group mb-3">
-                    <label for="Entity.Descripcion" class="form-label">Descripcion</label>
-                    <input type="text" class="form-control" asp-for="Entity.Descripcion" maxlength="250" required>
+                    <label for="Entity.IdProducto" class="form-label">IdProducto</label>
+                    <input type="text" class="form-control" asp-for="Entity.IdProducto" maxlength="250" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="Entity.CantidadProducto" class="form-label">Cantidad</label>
+                    <input type="text" class="form-control" asp-for="Entity.CantidadProducto" maxlength="250" required>
                 </div>
 
                 <div class="form-group form-check form-switch">
@@ -49,20 +53,15 @@
                 validating: 'glyphicon glyphicon-refresh'
             },
             fields: {
-                Descripcion: {
-                    message: 'Descripcion no valida',
-                    validators: {
-                        notEmpty: {
-                            message: 'Descripcion no puede ir vacio'
-                        },
+                Cantidad: {
                         stringLength: {
-                            min: 6,
-                            max: 30,
-                            message: 'La Descripcion debe ser de 6 a 30 caracteres'
+                            min: 1,
+                            max: 10,
+                            message: 'No puede ir vació'
                         },
                         regexp: {
-                            regexp: /^[a-zA-Z0-9]+$/,
-                            message: 'La Descripcion solo puede contener letras o numeros'
+                            regexp: /^[0-9]+$/,
+                            message: 'Solo puede contener numeros'
                         }
                     }
                 }

@@ -7,19 +7,19 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Entity;
 using WBL;
 
-namespace WebApp.Pages.TipoInquilino
+namespace WebApp.Pages.Orden
 {
     public class EditModel : PageModel
     {
-        private readonly ITipoInquilinoService TipoInquilinoService;
+        private readonly IOrdenService OrdenService;
 
-        public EditModel(ITipoInquilinoService TipoInquilinoService)
+        public EditModel(IOrdenService OrdenService)
         {
-            this.TipoInquilinoService = TipoInquilinoService;
+            this.OrdenService = OrdenService;
         }
 
         [BindProperty]
-        public TipoInquilinoEntity Entity { get; set; } = new TipoInquilinoEntity();
+        public OrdenEntity Entity { get; set; } = new OrdenEntity();
 
         [BindProperty(SupportsGet = true)]
         public int? id { get; set; }
@@ -32,7 +32,7 @@ namespace WebApp.Pages.TipoInquilino
             {
                 if (id.HasValue)
                 {
-                    Entity = await TipoInquilinoService.GetById(new() { Id_TipoInquilino = id });
+                    Entity = await OrdenService.GetById(new() { IdOrden = id });
                 }
 
                 return Page();
@@ -50,10 +50,10 @@ namespace WebApp.Pages.TipoInquilino
 
             try
             {
-                if (Entity.Id_TipoInquilino.HasValue)
+                if (Entity.IdOrden.HasValue)
                 {
                     //Actualizar 
-                    var result = await TipoInquilinoService.Update(Entity);
+                    var result = await OrdenService.Update(Entity);
 
                     if (result.CodeError != 0) throw new Exception(result.MsgError);
                     TempData["Msg"] = "<input type='text' id='mens' value='Registro Modificado Correctamente' hidden></input><br/>";
@@ -61,7 +61,7 @@ namespace WebApp.Pages.TipoInquilino
                 else
                 {
                     //Nuevo 
-                    var result = await TipoInquilinoService.Create(Entity);
+                    var result = await OrdenService.Create(Entity);
 
                     if (result.CodeError != 0) throw new Exception(result.MsgError);
                     TempData["Msg"] = "<input type='text' id='mens' value='Registro Agregado Correctamente' hidden></input><br/>";

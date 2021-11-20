@@ -373,3 +373,15 @@ C:\Users\max19\Downloads\Programacion6-examen1\WebApp\WebApp\obj\Debug\net5.0\We
 C:\Users\max19\Downloads\Programacion6-examen1\WebApp\WebApp\obj\Debug\net5.0\ref\WebApp.dll
 C:\Users\max19\Downloads\Programacion6-examen1\WebApp\WebApp\obj\Debug\net5.0\WebApp.pdb
 C:\Users\max19\Downloads\Programacion6-examen1\WebApp\WebApp\obj\Debug\net5.0\WebApp.genruntimeconfig.cache
+C:\Users\max19\Source\Repos\ProgramacionIVExamen2\WebApp\WebApp\obj\Debug\net5.0\WebApp.csproj.AssemblyReference.cache
+C:\Users\max19\Source\Repos\ProgramacionIVExamen2\WebApp\WebApp\obj\Debug\net5.0\WebApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\max19\Source\Repos\ProgramacionIVExamen2\WebApp\WebApp\obj\Debug\net5.0\WebApp.AssemblyInfoInputs.cache
+C:\Users\max19\Source\Repos\ProgramacionIVExamen2\WebApp\WebApp\obj\Debug\net5.0\WebApp.AssemblyInfo.cs
+C:\Users\max19\Source\Repos\ProgramacionIVExamen2\WebApp\WebApp\obj\Debug\net5.0\WebApp.csproj.CoreCompileInputs.cache
+C:\Users\max19\Source\Repos\ProgramacionIVExamen2\WebApp\WebApp\obj\Debug\net5.0\WebApp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\max19\Source\Repos\ProgramacionIVExamen2\WebApp\WebApp\obj\Debug\net5.0\WebApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\max19\Source\Repos\ProgramacionIVExamen2\WebApp\WebApp\obj\Debug\net5.0\WebApp.RazorAssemblyInfo.cache
+C:\Users\max19\Source\Repos\ProgramacionIVExamen2\WebApp\WebApp\obj\Debug\net5.0\WebApp.RazorAssemblyInfo.cs
+C:\Users\max19\Source\Repos\ProgramacionIVExamen2\WebApp\WebApp\obj\Debug\net5.0\WebApp.dll
+C:\Users\max19\Source\Repos\ProgramacionIVExamen2\WebApp\WebApp\obj\Debug\net5.0\ref\WebApp.dll
+C:\Users\max19\Source\Repos\ProgramacionIVExamen2\WebApp\WebApp\obj\Debug\net5.0\WebApp.pdb

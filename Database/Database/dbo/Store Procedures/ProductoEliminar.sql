@@ -1,7 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[InquilinoActualizar]
-    @Id_TipoInquilino int,
-	@Descripcion varchar(250),
-	@Estado bit
+﻿CREATE PROCEDURE [dbo].[ProductoEliminar]
+@IdProducto int
 
 
 AS BEGIN
@@ -10,12 +8,7 @@ SET NOCOUNT ON
   BEGIN TRANSACTION TRASA
 
     BEGIN TRY
-	
-	UPDATE dbo.TipoInquilino SET
-	 Descripcion = @Descripcion
-	,Estado = @Estado
-	WHERE 
-	       Id_TipoInquilino=@Id_TipoInquilino
+            DELETE FROM dbo.Producto WHERE IdProducto=@IdProducto
 	
 	  COMMIT TRANSACTION TRASA
 	  SELECT 0 AS CodeError, '' AS MsgError

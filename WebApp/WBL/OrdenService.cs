@@ -8,20 +8,20 @@ using Entity;
 
 namespace WBL
 {
-    public interface ITipoInquilinoService
+    public interface IOrdenService
     {
-        Task<DBEntity> Create(TipoInquilinoEntity entity);
-        Task<DBEntity> Delete(TipoInquilinoEntity entity);
-        Task<IEnumerable<TipoInquilinoEntity>> Get();
-        Task<TipoInquilinoEntity> GetById(TipoInquilinoEntity entity);
-        Task<DBEntity> Update(TipoInquilinoEntity entity);
+        Task<DBEntity> Create(OrdenEntity entity);
+        Task<DBEntity> Delete(OrdenEntity entity);
+        Task<IEnumerable<OrdenEntity>> Get();
+        Task<OrdenEntity> GetById(OrdenEntity entity);
+        Task<DBEntity> Update(OrdenEntity entity);
     }
 
-    public class TipoInquilinoService : ITipoInquilinoService
+    public class OrdenService : IOrdenService
     {
         private readonly IDataAccess sql;
 
-        public TipoInquilinoService(IDataAccess _sql)
+        public OrdenService(IDataAccess _sql)
         {
             sql = _sql;
         }
@@ -31,11 +31,11 @@ namespace WBL
         //Metodo Get
 
 
-        public async Task<IEnumerable<TipoInquilinoEntity>> Get()
+        public async Task<IEnumerable<OrdenEntity>> Get()
         {
             try
             {
-                var result = sql.QueryAsync<TipoInquilinoEntity>("dbo.InquilinoObtener");
+                var result = sql.QueryAsync<OrdenEntity>("dbo.OrdenObtener");
 
                 return await result;
             }
@@ -49,12 +49,12 @@ namespace WBL
         }
 
         //Metodo GetById
-        public async Task<TipoInquilinoEntity> GetById(TipoInquilinoEntity entity)
+        public async Task<OrdenEntity> GetById(OrdenEntity entity)
         {
             try
             {
-                var result = sql.QueryFirstAsync<TipoInquilinoEntity>("dbo.InquilinoObtener", new
-                { entity.Id_TipoInquilino });
+                var result = sql.QueryFirstAsync<OrdenEntity>("dbo.OrdenObtener", new
+                { entity.IdOrden });
 
                 return await result;
             }
@@ -68,13 +68,14 @@ namespace WBL
 
         //Metodo Create
 
-        public async Task<DBEntity> Create(TipoInquilinoEntity entity)
+        public async Task<DBEntity> Create(OrdenEntity entity)
         {
             try
             {
-                var result = sql.ExecuteAsync("dbo.InquiloInsertar", new
+                var result = sql.ExecuteAsync("dbo.OrdenInsertar", new
                 {
-                    entity.Descripcion,
+                    entity.IdProducto,
+                    entity.CantidadProducto,
                     entity.Estado
 
 
@@ -92,14 +93,15 @@ namespace WBL
         }
 
         //Metodo Update
-        public async Task<DBEntity> Update(TipoInquilinoEntity entity)
+        public async Task<DBEntity> Update(OrdenEntity entity)
         {
             try
             {
-                var result = sql.ExecuteAsync("dbo.InquilinoActualizar", new
+                var result = sql.ExecuteAsync("dbo.OrdenActualizar", new
                 {
-                    entity.Id_TipoInquilino,
-                    entity.Descripcion,
+                    entity.IdOrden,
+                    entity.IdProducto,
+                    entity.CantidadProducto,
                     entity.Estado
 
 
@@ -116,13 +118,13 @@ namespace WBL
         }
 
         //Metodo Delete
-        public async Task<DBEntity> Delete(TipoInquilinoEntity entity)
+        public async Task<DBEntity> Delete(OrdenEntity entity)
         {
             try
             {
-                var result = sql.ExecuteAsync("dbo.InquilinoEliminar", new
+                var result = sql.ExecuteAsync("dbo.OrdenEliminar", new
                 {
-                    entity.Id_TipoInquilino,
+                    entity.IdOrden,
 
                 });
 

@@ -1,0 +1,72 @@
+﻿@page
+@model WebApp.Pages.Producto.GridModel
+@{ }
+<div class="container-fluid">
+
+    <div class="card">
+        <div class="card-header">
+            Producto
+        </div>
+        <div class="card-body">
+            <a class="btn btn-outline-primary" asp-page="Edit">
+                <i class='bx bx-add-to-queue'></i>
+            </a>
+            <div class="row">
+                <div class="col-12">
+                    <table id="GridView" class="table table-bordered table table-striped table table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre del producto</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tboby>
+                            @foreach (var item in Model.GridList)
+                            {
+                <tr>
+                    <td>@item.IdProducto</td>
+                    <td>@item.NombreProducto</td>
+                    <td>@item.PrecioProducto</td>
+                    <td>
+                        <a class="btn btn-primary" asp-page="Edit" asp-route-id="@item.IdProducto"><i class='bx bx-edit-alt'></i></a>
+                        <a class="btn btn-danger" asp-page-handler="Eliminar" asp-route-id="@item.IdProducto"><i class='bx bx-trash'></i></a>
+                    </td>
+                </tr>}
+                        </tboby>
+                    </table>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    @Html.Raw(Model.Mensaje)
+</div>
+@section Scripts{
+
+    <script>
+        $(document).ready(function () {
+            var mens = document.getElementById("mens").value;
+            console.log(mens);
+            if (mens != "") {
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: mens,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }
+            $('#GridView').DataTable();
+            
+            
+            
+        });
+    </script>
+
+    <script defer src="~/App/Producto/Grid.js"></script>
+
+}

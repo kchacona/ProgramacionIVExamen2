@@ -9,4 +9,5 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-:r .\ScriptConfiguration\TipoInquilinos.sql
+:r .\ScriptConfiguration\Productos.sql
+:r .\ScriptConfiguration\Ordenes.sql

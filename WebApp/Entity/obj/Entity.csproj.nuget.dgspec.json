@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\max19\\Downloads\\Programacion6-examen1\\WebApp\\Entity\\Entity.csproj": {}
+    "C:\\Users\\max19\\Source\\Repos\\ProgramacionIVExamen2\\WebApp\\Entity\\Entity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\max19\\Downloads\\Programacion6-examen1\\WebApp\\Entity\\Entity.csproj": {
+    "C:\\Users\\max19\\Source\\Repos\\ProgramacionIVExamen2\\WebApp\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\max19\\Downloads\\Programacion6-examen1\\WebApp\\Entity\\Entity.csproj",
+        "projectUniqueName": "C:\\Users\\max19\\Source\\Repos\\ProgramacionIVExamen2\\WebApp\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "C:\\Users\\max19\\Downloads\\Programacion6-examen1\\WebApp\\Entity\\Entity.csproj",
+        "projectPath": "C:\\Users\\max19\\Source\\Repos\\ProgramacionIVExamen2\\WebApp\\Entity\\Entity.csproj",
         "packagesPath": "C:\\Users\\max19\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\max19\\Downloads\\Programacion6-examen1\\WebApp\\Entity\\obj\\",
+        "outputPath": "C:\\Users\\max19\\Source\\Repos\\ProgramacionIVExamen2\\WebApp\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

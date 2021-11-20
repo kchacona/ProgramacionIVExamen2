@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "77+Km6Mh6AZvTTGTMxVr9sEXgVyIwv2H5AIGh4FE7EWgrTbsm6Iz0pOe0WiF4tJhzebyz/YAG1avTy2OihEHLg==",
+  "dgSpecHash": "KxamRJG2Wp1CJxkHy6Veb2RKulw76AeGI//SaQn1+K1AO3s0san85XtPTx13eMi8uXP6TJpMU2wH0HDOvSIzzQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\max19\\Downloads\\Programacion6-examen1\\WebApp\\WBL\\WBL.csproj",
+  "projectFilePath": "C:\\Users\\max19\\Source\\Repos\\ProgramacionIVExamen2\\WebApp\\WBL\\WBL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\max19\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
     "C:\\Users\\max19\\.nuget\\packages\\dapper.mapper\\2.0.0\\dapper.mapper.2.0.0.nupkg.sha512",

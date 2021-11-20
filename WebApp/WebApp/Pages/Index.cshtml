@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Pagina Inicial";
+}
+
+<div id="" class="container">
+    <button onclick="mostrar()" class="btn btn-outline-primary">
+        Prueba
+    </button>
+</div>
+
+<script>
+    function mostrar()
+    {
+        Swal.fire({
+            title: 'Continua',
+            text: 'Seleccione Tipo Inquilino ',
+            icon: 'info',
+            confirmButtonText: 'Cool'
+        })
+    }
+</script>
